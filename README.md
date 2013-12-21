@@ -28,6 +28,10 @@ config.rails_lineman.lineman_project_location = "my-lineman-app"
 
 Alternatively, rails-lineman will look for an environment variable named `LINEMAN_PROJECT_LOCATION`.
 
+Note that to prevent your Lineman JavaScript & CSS from being loaded twice in production, you'll need
+to remove the `require_tree .` directives from `app/assets/javascripts/application.js`
+and `app/assets/stylesheets/application.css`.
+
 ### the Lineman side
 
 Just add the [lineman-rails](https://github.com/testdouble/lineman-rails) plugin to your project:
@@ -108,6 +112,15 @@ Such that the `public/assets` folder looks like:
 │   ├── app-fb85a2e2e5fd3d180c60a66772648703.css
 │   └── app-fb85a2e2e5fd3d180c60a66772648703.css.gz
 └── manifest-c468cd8d56c4364af6110bc39b00ed40.json
+```
+
+Note that in Rails 4, Rails will by default not serve any static assets out of
+`public/assets` when running in the production environment (leaving that up to
+Apache/nginx). To verify this is all working you may need to configure in
+`config/environments/production.rb`:
+
+``` ruby
+config.serve_static_assets = true
 ```
 
 ## Heroku
