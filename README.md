@@ -87,7 +87,7 @@ $ RAILS_ENV=production bundle exec rake assets:precompile
 
 You'll see output include your Lineman bundles:
 
-``` bash
+```
 #...
 I, [2013-12-21T16:06:11.354975 #44655]  INFO -- : Writing /Users/justin/code/vagrants/oss/projects/javascript/lineman-plus-rails/my-rails-app/public/assets/lineman/app-e3428c9a812e9ed915d331ea97e88357.js
 I, [2013-12-21T16:06:11.358738 #44655]  INFO -- : Writing /Users/justin/code/vagrants/oss/projects/javascript/lineman-plus-rails/my-rails-app/public/assets/lineman/app-fb85a2e2e5fd3d180c60a66772648703.css
