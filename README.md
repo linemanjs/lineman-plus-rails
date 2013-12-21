@@ -1,6 +1,6 @@
 # lineman + rails
 
-Behold, a Rails app that can build use and build lineman assets easily. Under this
+Behold, a Rails app that can build and deploy lineman assets easily. Under this
 approach, an application's JavaScript & CSS would be built by lineman but would
 flow through the asset pipeline like any other asset in a Rails application.
 
