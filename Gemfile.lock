@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/testdouble/rails-lineman.git
-  revision: edd7f3685c135fcfb782a94425c827138e21c83b
+  revision: b791729acb2e5d38694333ab01abe8ea40a326de
   specs:
     rails-lineman (0.0.1)
       rake
