@@ -44,4 +44,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rails-lineman', :git => 'git://github.com/testdouble/rails-lineman.git' # :path => "../rails-lineman"
+gem 'rails-lineman'
