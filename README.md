@@ -110,23 +110,8 @@ Such that the `public/assets` folder looks like:
 └── manifest-c468cd8d56c4364af6110bc39b00ed40.json
 ```
 
-## Issues
+## Heroku
 
-At this time you can't push this repo to heroku because apparently `npm` isn't
-on the path on the cedar VM. Whoops.
-
-```
------> Preparing app for Rails asset pipeline
-       Running: rake assets:precompile
-       rake aborted!
-       rails-lineman failed while running `npm install` from the `/tmp/build_9ab8fe0d-b46f-4899-9d47-3c673bc6c156/my-lineman-app` directory.
-       Make sure that you have Node.js installed on your system and that `npm` is on your PATH.
-       You can download Node.js here: http://nodejs.org
-       /tmp/build_9ab8fe0d-b46f-4899-9d47-3c673bc6c156/vendor/bundle/ruby/2.0.0/gems/rails-lineman-0.0.1/lib/rails_lineman/lineman_doer.rb:57:in `run_npm_install'
-       /tmp/build_9ab8fe0d-b46f-4899-9d47-3c673bc6c156/vendor/bundle/ruby/2.0.0/gems/rails-lineman-0.0.1/lib/rails_lineman/lineman_doer.rb:16:in `block in build'
-       /tmp/build_9ab8fe0d-b46f-4899-9d47-3c673bc6c156/vendor/bundle/ruby/2.0.0/gems/rails-lineman-0.0.1/lib/rails_lineman/lineman_doer.rb:51:in `chdir'
-       /tmp/build_9ab8fe0d-b46f-4899-9d47-3c673bc6c156/vendor/bundle/ruby/2.0.0/gems/rails-lineman-0.0.1/lib/rails_lineman/lineman_doer.rb:15:in `build'
-       /tmp/build_9ab8fe0d-b46f-4899-9d47-3c673bc6c156/vendor/bundle/ruby/2.0.0/gems/rails-lineman-0.0.1/lib/tasks/assets_precompile.rake:9:in `block (2 levels) in <top (required)>'
-       Tasks: TOP => assets:precompile
-       (See full trace by running task with --trace)
-```
+Somewhat humorously, rails-lineman will actually try to detect whether it's running on Heroku
+(by looking for STACK and DYNO environment variables) and will install Node.js and add it to
+the path so that it can build the lineman project.
