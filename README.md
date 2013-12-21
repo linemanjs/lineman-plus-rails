@@ -65,14 +65,14 @@ just include it like this in your ERB (in this app, see `app/views/widgets/index
 <%= javascript_include_tag "lineman/app" %>
 ```
 
-If you're cloning this repo to play around, try hitting: [localhost:8000/widgets](localhost:8000/widgets)
+If you're cloning this repo to play around, try hitting: [localhost:8000/widgets](http://localhost:8000/widgets)
 and you should see Lineman's familiar hello world example render properly:
 
 ![Screenshot](http://f.cl.ly/items/2z32393h001w1a3S0K3f/Screen%20Shot%202013-12-21%20at%2016.01.23.png)
 
 ## Production
 
-At deploy time, the `rails-lineman` gem will wrap the `assets:precompile task such
+At deploy time, the `rails-lineman` gem will wrap the `assets:precompile` task such
 that the Lineman assets are first built (by default, into
 `app/assets/javascripts/lineman` and `app/assets/stylesheets/lineman`). Then the
 asset pipeline will compile all of your assets as it normally would into
