@@ -1,6 +1,6 @@
 # lineman + rails
 
-Behold, a Rails app that can build and deploy lineman assets easily. Under this
+Behold, a Rails app that can build and deploy [Lineman](http://linemanjs.com) assets easily. Under this
 approach, an application's JavaScript & CSS would be built by lineman but would
 flow through the asset pipeline like any other asset in a Rails application.
 
@@ -10,9 +10,11 @@ of fitting into the typical Rails deployment story.
 
 ## Setup
 
+Instructions on how to reproduce this repo's setup follows:
+
 ### the Rails side
 
-Add 'rails-lineman' to your Gemfile.
+Add [rails-lineman](https://github.com/testdouble/rails-lineman) to your Gemfile.
 
 ``` ruby
 gem 'rails-lineman'
@@ -28,7 +30,7 @@ Alternatively, rails-lineman will look for an environment variable named `LINEMA
 
 ### the Lineman side
 
-Just add the lineman-rails plugin to your project:
+Just add the [lineman-rails](https://github.com/testdouble/lineman-rails) plugin to your project:
 
 ```
 $ npm install --save-dev lineman-rails
@@ -62,6 +64,11 @@ just include it like this in your ERB (in this app, see `app/views/widgets/index
 <%= stylesheet_link_tag "lineman/app" %>
 <%= javascript_include_tag "lineman/app" %>
 ```
+
+If you're cloning this repo to play around, try hitting: [localhost:8000/widgets](localhost:8000/widgets)
+and you should see Lineman's familiar hello world example render properly:
+
+![Screenshot](http://f.cl.ly/items/2z32393h001w1a3S0K3f/Screen%20Shot%202013-12-21%20at%2016.01.23.png)
 
 ## Production
 
