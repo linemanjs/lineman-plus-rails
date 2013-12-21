@@ -79,6 +79,37 @@ asset pipeline will compile all of your assets as it normally would into
 `public/assets`. Finally, the Lineman assets are removed from the app so they
 don't clutter up your version control.
 
+That is to say, when you precompile assets:
+
+```
+$ RAILS_ENV=production bundle exec rake assets:precompile
+```
+
+You'll see output include your Lineman bundles:
+
+``` bash
+#...
+I, [2013-12-21T16:06:11.354975 #44655]  INFO -- : Writing /Users/justin/code/vagrants/oss/projects/javascript/lineman-plus-rails/my-rails-app/public/assets/lineman/app-e3428c9a812e9ed915d331ea97e88357.js
+I, [2013-12-21T16:06:11.358738 #44655]  INFO -- : Writing /Users/justin/code/vagrants/oss/projects/javascript/lineman-plus-rails/my-rails-app/public/assets/lineman/app-fb85a2e2e5fd3d180c60a66772648703.css
+
+#...
+```
+
+Such that the `public/assets` folder looks like:
+
+```
+├── application-76c1a0ca10a36eee991a7b35233c7a93.js
+├── application-76c1a0ca10a36eee991a7b35233c7a93.js.gz
+├── application-fb85a2e2e5fd3d180c60a66772648703.css
+├── application-fb85a2e2e5fd3d180c60a66772648703.css.gz
+├── lineman
+│   ├── app-e3428c9a812e9ed915d331ea97e88357.js
+│   ├── app-e3428c9a812e9ed915d331ea97e88357.js.gz
+│   ├── app-fb85a2e2e5fd3d180c60a66772648703.css
+│   └── app-fb85a2e2e5fd3d180c60a66772648703.css.gz
+└── manifest-c468cd8d56c4364af6110bc39b00ed40.json
+```
+
 ## Issues
 
 At this time you can't push this repo to heroku because apparently `npm` isn't
