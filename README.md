@@ -8,6 +8,9 @@ This gives you the productivity and organizational benefits of separating out yo
 front-end source code with a first-class build tool in Lineman, but with the convenience
 of fitting into the typical Rails deployment story.
 
+This repo was pushed to Heroku using the default Rails buildpack and can be
+demoed [here](http://mysterious-retreat-8708.herokuapp.com/widgets).
+
 ## Setup
 
 Instructions on how to reproduce this repo's setup follows:
