@@ -31,10 +31,6 @@ config.rails_lineman.lineman_project_location = "my-lineman-app"
 
 Alternatively, rails-lineman will look for an environment variable named `LINEMAN_PROJECT_LOCATION`.
 
-Note that to prevent your Lineman JavaScript & CSS from being loaded twice in production, you'll need
-to remove the `require_tree .` directives from `app/assets/javascripts/application.js`
-and `app/assets/stylesheets/application.css`.
-
 ### the Lineman side
 
 Just add the [lineman-rails](https://github.com/testdouble/lineman-rails) plugin to your project:
