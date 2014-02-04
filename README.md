@@ -17,7 +17,7 @@ Instructions on how to reproduce this repo's setup follows:
 
 ### the Rails side
 
-Add [rails-lineman](https://github.com/testdouble/rails-lineman) to your Gemfile.
+Add [rails-lineman](https://github.com/linemanjs/rails-lineman) to your Gemfile.
 
 ``` ruby
 gem 'rails-lineman'
@@ -33,7 +33,7 @@ Alternatively, rails-lineman will look for an environment variable named `LINEMA
 
 ### the Lineman side
 
-Just add the [lineman-rails](https://github.com/testdouble/lineman-rails) plugin to your project:
+Just add the [lineman-rails](https://github.com/linemanjs/lineman-rails) plugin to your project:
 
 ```
 $ npm install --save-dev lineman-rails
