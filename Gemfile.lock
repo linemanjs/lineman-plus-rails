@@ -100,9 +100,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
+    turbolinks (2.5.4)
+      coffee-rails
     tzinfo (0.3.56)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -120,7 +119,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
-  turbolinks
+  turbolinks (~> 2)
   uglifier (>= 1.3.0)
 
 BUNDLED WITH
